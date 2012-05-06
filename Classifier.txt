@@ -1,0 +1,46 @@
+Classifier.txt
+
+Results
+
+The top 10 most informative words to classify by Arts, Business, Obituaries, Sports, World respectively
+['exhead', 'exhibit', 'exhibition', 'exhibitionist', 'exhausted', 'exhibited', 'exhawks', 'exhaustive', 'exhausting']
+['companies', 'billion', 'bonds', 'bank', 'investors', 'dealbook', 'federal', 'stock', 'stocks', 'percent']
+['complications', 'lived', 'home', 'dies', 'died', 'cancer', 'yesterday', 'failure', 'hospital', '77']
+['replay', 'jets', 'briefing', 'photo', 'scored', 'yankees', 'sports', 'baseball', 'championship', 'roundup']
+['officials', 'military', 'col', 'muammar', 'government', 'elqaddafi', 'afghan', 'police', 'opposition']
+
+Top 10 most difficult to classify articles include:
+(I loaded all articles as sets, so these are sets of words in articles that were hard to classify, with the difference in probablilites)
+
+[
+[0.005474013720787596, set(['saturdays', '88', 'mornings', 'london', 'home', 'breakfast', 'saturday', 'group', 'friends', 'painter', 'lucian', 'memoir', 'editor', 'intimate', 'greig', 'standard', 'recalled', 'july', 'died', 'publisher', 'artsbeat', 'restaurant', 'age', 'spent', 'freud', 'clarkes', 'evening', 'steps', 'geordie'])], 
+
+[0.006235880871530597, set(['slope', 'named', 'family', 'money', 'year', 'estimates', 'spent', 'puggle', 'neighborhood', 'pit', 'pokie', 'takes', 'mix', 'veterinary', 'adopted', 'browny', 'run', 'dogs', 'deborah', 'patient', 'nocella', 'park', 'vet', 'feels', 'bull', 'care', '43yearold', 'dog', 'costs', 'familys', 'ms', 'mother', 'puppies'])], 
+
+[0.009311394993657629, set(['strongly', 'deal', 'deputy', 'stern', 'saturday', 'retire', 'retirement', 'thinking', 'plans', 'labor', 'statement', 'commissioner', 'definitive', 'notsodistant', 'expires', 'subject', 'reiterated', 'step', 'succeed', 'timing', 'vague', 'successor', 'endorses', 'orlando', 'david', 'future', 'fla', 'nbas'])], 
+
+[0.022160233366586013, set(['shuffle', 'century', 'suddenly', 'back', 'past', 'ended', 'drawings', 'owner', 'art', 'rarely', 'laliques', 'factory', 'antiques', 'lalique', 'luxuryglass', 'offices', 'decades', 'neglected', 'french', 'regular', 'collection', 'owners', 'dating', 'current', 'products', 'design', 'view', 'corporate', 'maker', 'vogue'])], 
+
+[0.025295284944844454, set(['\xe2\x80\x98follies\xe2\x80\x99', 'revival', 'kennedy', 'washington', 'photos', 'center'])], 
+
+[0.025296164434745805, set(['painting', 'chinese', 'moved', 'states', 'born', 'taught', 'farewell', 'brush', 'taiwan', 'education', 'arts', 'united', 'creative', 'live', 'parents', 'aching', 'del', 'attend', 'loved', 'grandparents', 'school', 'boss', 'important', 'calligraphy', 'feet', 'sister', '15', 'wilmington', 'brother', 'grandfather', 'taipei'])], 
+
+[0.03254039611545245, set(['lords', 'showering', 'gold', 'classic', 'days', 'pushed', 'cost', 'fanciful', 'year', 'hens', 'birds', 'mix', 'tight', 'choruses', 'bonus', 'lauded', 'christmas', 'assorted', 'big', 'pear', 'yearend', 'french', 'leaping', 'gifts', 'pricey', 'prices', 'partridge', 'carol', 'loved', '12', 'gift', 'rethink', 'tree', 'budget', 'piping', 'rising', 'pipers'])], 
+
+[0.033953245247602126, set(['feed', 'set', 'german', 'dioxin', 'sales', 'discovered', 'farms', 'officials', 'millions', '4700', 'food', 'banning', 'import', 'countries', 'announced', 'friday', 'started', 'eggs', 'halted', 'berlin', 'pigs', 'germany', 'contamination', 'authorities', 'news', 'ago', 'shelves', 'months', 'chickens', 'small', 'pulled', 'scramble'])], 
+
+[0.04081660512179219, set(['begun', 'vincent', 'partnership', 'share', 'reimagine', 'air', 'quality', 'mayor', 'end', 'paris', 'effort', 'mobility', 'electricvehicle', 'bicycles', 'ambitious', 'cars', 'bollor\xc3\xa9', 'autolib', 'urban', 'tests', 'electric', 'billionaire', 'extending', 'citys', 'investor', 'rentals', 'improve', 'shortterm', 'socialist', 'delano\xc3\xab', 'called', 'bertrand', 'parisians'])], 
+
+[0.044349829053455636, set(['klink', 'broadhurst', 'held', 'street', 'resnick', 'thursday', '235', 'open', 'speak', '11', 'memorial', 'klemperer', 'west', 'actor', 'role', 'tribute', 'bosco', 'manhattan', '44th', 'colonel', 'regina', 'free', 'tammy', 'philip', 'television', 'theater', 'public', 'werner', 'mr', 'grimes'])]]
+
+Confusion Matrix: 
+[[ 916.   15.   14.   16.   39.]
+ [  82.  873.    9.   12.  119.]
+ [   6.    1.  964.   10.   19.]
+ [   8.    8.    2.  963.   19.]
+ [  10.   23.    2.    4.  961.]]
+
+Time
+8.15702009201
+
+When we play with Alpha and Beta Values, we found if alpha = beta, we divide by zero.  If we set them to negative we begin to see undefined behaviors, and typically we found the best performace for when alpha > beta and alpha - beta < 3
